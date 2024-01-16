@@ -18,7 +18,7 @@ class FragranceTournament {
       const results = JSON.parse(fs.readFileSync("results.json"));
       return results;
     } catch (err) {
-      // Create the results.json file if it does not exist.
+      // Create the results.json file if it does not exist:
       fs.writeFileSync("results.json", "[]");
       return [];
     }
