@@ -30,9 +30,7 @@ class FragranceTournament {
   }
 
   getCombinationPairs(category) {
-    console.log(`getCombinationPairs called with category: ${category}`);
     const fragrances = this.entrants[category];
-    console.log(`fragrances: ${fragrances}`);
     const pairs = [];
     for (let i = 0; i < fragrances.length; i++) {
       for (let j = i + 1; j < fragrances.length; j++) {
