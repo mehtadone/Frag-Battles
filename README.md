@@ -3,8 +3,11 @@ A simple nodejs terminal application that runs a round robin style tournament to
 
 I wrote it for myself. 
 
+How to: 
+
 1. Download the code from this github (top right)
 2. Learn how to run it: https://code.visualstudio.com/docs/nodejs/nodejs-tutorial
+3. Update the data.json file with your collection. You can use something like ChatGPT to categorise and create the correct format for you. 
 
 How I use it: 
 
