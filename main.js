@@ -141,7 +141,7 @@ class FragranceTournament {
     });
     let battleNumber = 1;
     Object.keys(battlesByCategory).forEach((category) => {
-      console.log(`Category: ${category}`);
+      console.log(`\n\x1b[33mCategory: ${category}\x1b[0m`);
       battlesByCategory[category].forEach((battle) => {
         console.log(`  ${battleNumber}. ${battle[0][0]} vs ${battle[0][1]}`);
         battleNumber++;
@@ -149,6 +149,7 @@ class FragranceTournament {
     });
     return battles;
   }
+  
 
   prompt(rl, loop) {
     const battles = this.showBattles();
