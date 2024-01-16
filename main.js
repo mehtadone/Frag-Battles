@@ -3,8 +3,8 @@ const readline = require("readline");
 
 class FragranceTournament {
   constructor() {
-    this.categories = ["SD", "SE", "WD", "WE"];
     this.entrants = this.readData();
+    this.categories = Object.keys(this.entrants);
     this.results = this.readResults();
   }
 
@@ -18,16 +18,21 @@ class FragranceTournament {
       const results = JSON.parse(fs.readFileSync("results.json"));
       return results;
     } catch (err) {
+      // Create the results.json file if it does not exist
+      fs.writeFileSync("results.json", "[]");
       return [];
     }
   }
+  
 
   writeResults() {
     fs.writeFileSync("results.json", JSON.stringify(this.results));
   }
 
   getCombinationPairs(category) {
+    console.log(`getCombinationPairs called with category: ${category}`);
     const fragrances = this.entrants[category];
+    console.log(`fragrances: ${fragrances}`);
     const pairs = [];
     for (let i = 0; i < fragrances.length; i++) {
       for (let j = i + 1; j < fragrances.length; j++) {
@@ -36,10 +41,11 @@ class FragranceTournament {
     }
     return pairs;
   }
+  
 
   showStandings() {
     const standings = {};
-    this.results.forEach(result => {
+    this.results.forEach((result) => {
       const category = result.category;
       if (!standings[category]) {
         standings[category] = {};
@@ -50,21 +56,25 @@ class FragranceTournament {
       }
       standings[category][winner]++;
     });
-    Object.keys(standings).forEach(category => {
+    Object.keys(standings).forEach((category) => {
       console.log(`\nCategory: ${category}`);
       const categoryStandings = standings[category];
-      const sortedStandings = Object.keys(categoryStandings).sort((a, b) => categoryStandings[b] - categoryStandings[a]);
+      const sortedStandings = Object.keys(categoryStandings).sort(
+        (a, b) => categoryStandings[b] - categoryStandings[a]
+      );
       let rank = 1;
-      sortedStandings.forEach(winner => {
-        let color = '';
+      sortedStandings.forEach((winner) => {
+        let color = "";
         if (rank === 1) {
-          color = '\x1b[33m'; // yellow
+          color = "\x1b[33m"; // yellow
         } else if (rank === 2) {
-          color = '\x1b[34m'; // blue
+          color = "\x1b[34m"; // blue
         } else if (rank === 3) {
-          color = '\x1b[32m'; // green
+          color = "\x1b[32m"; // green
         }
-        console.log(`  ${color}${rank}. ${winner}: ${categoryStandings[winner]}\x1b[0m`);
+        console.log(
+          `  ${color}${rank}. ${winner}: ${categoryStandings[winner]}\x1b[0m`
+        );
         rank++;
       });
     });
@@ -100,19 +110,19 @@ class FragranceTournament {
 
   showHistory() {
     const resultsByCategory = {};
-    this.results.forEach(result => {
+    this.results.forEach((result) => {
       const category = result.category;
       if (!resultsByCategory[category]) {
         resultsByCategory[category] = [];
       }
       resultsByCategory[category].push(result);
     });
-    Object.keys(resultsByCategory).forEach(category => {
+    Object.keys(resultsByCategory).forEach((category) => {
       console.log(`\nCategory: ${category}`);
-      resultsByCategory[category].forEach(result => {
+      resultsByCategory[category].forEach((result) => {
         console.log(
           `  \x1b[32m${result.winner}\x1b[0m vs ${result.entrants.find(
-            entrant => entrant !== result.winner
+            (entrant) => entrant !== result.winner
           )}`
         );
       });
