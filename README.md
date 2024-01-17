@@ -13,5 +13,6 @@ How I use it:
 
 I run wrist tests using decants that I have bought and enter the results in here. Hopefully it will give me an educated decision on what I like and what I want to buy. ChatGPT or other AI tools can help categorise, create the data.json and offer similarities etc. 
 
-![image](https://github.com/mehtadone/Frag-Battles/assets/8123496/63a1bd9d-53a0-4ff0-ae80-f77ad45cc6bd)
+![image](https://github.com/mehtadone/Frag-Battles/assets/8123496/838e42cb-b8ae-4a65-bf62-30ca304959b1)
+
 
