@@ -4,7 +4,7 @@
       "Acqua di Gio Profondo",
       "Bvlgari Aqua Pour Homme",
       "MM Cedrat Boise",
-      "Dior Sauvage Parfum",
+      "Dior Sauvage Parfum", 
       "Roja Elysium Parfum",
       "Chanel Allure Sport EDT"
     ],
@@ -13,7 +13,7 @@
       "MM Jazz Club",
       "Montblanc Explorer",
       "Montblanc Legend Spirit",
-      "Moschino Toy Boy",
+      "Moschino Toy Boy",  
       "Prada Luna Rossa Black",
       "Prada L’Homme Intense",
       "Versace Eros Pour Homme"
@@ -21,32 +21,33 @@
     "Winter Day": [
       "1861 Naxos",
       "Azzaro The Most Wanted",
-      "Creed Irish Tweed (dupe)",
+      "Creed Irish Tweed (dupe)", 
       "Dior Fahrenheit",
       "Ferrari Black EDT",
       "Gentleman EDP Réserve Privée",
+      "Jean Paul Gaultier Le Male Elixir",   
       "Lattafa Badee Al Oud",
-      "Mancera Red Tobacco",
+      "Mancera Red Tobacco", 
       "TF Ombré Leather",
       "Spicebomb Extreme",
       "TF Tobacco Vanille"
     ],
-    "Winter Evening": [
-      "Armani Code Parfum",
-      "Armani Stronger With You ",
-      "Art of Shaving Oud Suede",
-      "Art of Shaving Sandalwood & Cypress",
-      "Chanel Bleu EDT",
-      "Club De Nuit Intense",
-      "Escentric Molecules 02",
-      "Gaultier Le Male Elixir",
-      "PDM Haltane",
-      "Jean Paul Gaultier Le Male Elixir",
-      "PDM Layton Exclusif",
-      "TF Noir Extreme",
-      "TF Oud Wood",
-      "Montale Intense Cafe",
-      "PDM Galloway"
+    "Winter Evening": [ 
+     "Armani Code Parfum",
+     "Armani Stronger With You",
+     "Art of Shaving Oud Suede",
+     "Art of Shaving Sandalwood & Cypress",
+     "Chanel Bleu EDT",  
+     "Club De Nuit Intense", 
+     "Escentric Molecules 02",
+     "Gaultier Le Male Elixir",
+     "PDM Haltane",
+     "Jean Paul Gaultier Le Male Elixir",
+     "PDM Layton Exclusif",
+     "TF Noir Extreme",
+     "TF Oud Wood",  
+     "Montale Intense Cafe",
+     "PDM Galloway"
     ]
   }
 }
