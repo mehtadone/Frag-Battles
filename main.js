@@ -24,7 +24,6 @@ class FragranceTournament {
     }
   }
   
-
   writeResults() {
     fs.writeFileSync("results.json", JSON.stringify(this.results));
   }
@@ -40,7 +39,6 @@ class FragranceTournament {
     return pairs;
   }
   
-
   showStandings() {
     const standings = {};
     this.results.forEach((result) => {
@@ -108,18 +106,28 @@ class FragranceTournament {
 
   showHistory() {
     const resultsByCategory = {};
+    
     this.results.forEach((result) => {
       const category = result.category;
       if (!resultsByCategory[category]) {
-        resultsByCategory[category] = [];
+        resultsByCategory[category] = []; 
       }
       resultsByCategory[category].push(result);
     });
+  
     Object.keys(resultsByCategory).forEach((category) => {
-      console.log(`\nCategory: ${category}`);
+      console.log(`\nCategory: ${category}\n`);
+      
+      // Sort winners alphabetically
+      resultsByCategory[category].sort((a, b) => {
+        if (a.winner < b.winner) return -1;
+        if (a.winner > b.winner) return 1;
+        return 0;
+      });
+  
       resultsByCategory[category].forEach((result) => {
-        console.log(
-          `  \x1b[32m${result.winner}\x1b[0m vs ${result.entrants.find(
+        console.log(  
+          `\x1b[32m${result.winner}\x1b[0m vs ${result.entrants.find(
             (entrant) => entrant !== result.winner
           )}`
         );
