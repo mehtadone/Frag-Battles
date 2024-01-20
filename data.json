@@ -1,53 +1,59 @@
 {
   "entrants": {
     "Summer Day": [
-      "Acqua di Gio Profondo",
+      "Acqua di Gio Profondo", 
       "Bvlgari Aqua Pour Homme",
-      "MM Cedrat Boise",
-      "Dior Sauvage Parfum", 
+      "Davidoff Cool Water Intense", 
+      "Dior Sauvage Parfum",
       "Roja Elysium Parfum",
       "Chanel Allure Sport EDT"
     ],
     "Summer Evening": [
+      "Carolina Herrera Bad Boy Extreme",
       "Jean Paul Gaultier Le Male Le Parfum",
       "MM Jazz Club",
       "Montblanc Explorer",
       "Montblanc Legend Spirit",
-      "Moschino Toy Boy",  
+      "Moschino Toy Boy",   
+      "Paco Rabanne 1 Million Elixir",
       "Prada Luna Rossa Black",
       "Prada L’Homme Intense",
-      "Versace Eros Pour Homme"
+      "Versace Eros Flame" 
     ],
     "Winter Day": [
       "1861 Naxos",
       "Azzaro The Most Wanted",
+      "Azzaro Wanted By Night",
       "Creed Irish Tweed (dupe)", 
-      "Dior Fahrenheit",
+      "Dior Fahrenheit Le Parfum",
       "Ferrari Black EDT",
       "Gentleman EDP Réserve Privée",
+      "Hugo Boss Bottled Elixir",  
       "Jean Paul Gaultier Le Male Elixir",   
       "Lattafa Badee Al Oud",
       "Mancera Red Tobacco", 
       "TF Ombré Leather",
       "Spicebomb Extreme",
+      "TF Tuscan Leather",
       "TF Tobacco Vanille"
-    ],
+    ],  
     "Winter Evening": [ 
-     "Armani Code Parfum",
-     "Armani Stronger With You",
-     "Art of Shaving Oud Suede",
-     "Art of Shaving Sandalwood & Cypress",
-     "Chanel Bleu EDT",  
-     "Club De Nuit Intense", 
-     "Escentric Molecules 02",
-     "Gaultier Le Male Elixir",
-     "PDM Haltane",
-     "Jean Paul Gaultier Le Male Elixir",
-     "PDM Layton Exclusif",
-     "TF Noir Extreme",
-     "TF Oud Wood",  
-     "Montale Intense Cafe",
-     "PDM Galloway"
+      "Armani Code Parfum",
+      "Armani Stronger With You ",  
+      "Art of Shaving Oud Suede",
+      "Art of Shaving Sandalwood & Cypress",
+      "Chanel Bleu EDT",   
+      "Club De Nuit Intense",
+      "Dior Fahrenheit Le Parfum",
+      "Escentric Molecules 02",
+      "Gaultier Le Male Elixir",
+      "Paco Rabanne Invictus Victory Elixir",  
+      "Jean Paul Gaultier Le Male Elixir",
+      "PDM Layton Exclusif",
+      "TF Noir Extreme",
+      "TF Oud Wood",   
+      "Montale Intense Cafe",
+      "PDM Galloway"
     ]
   }
 }
