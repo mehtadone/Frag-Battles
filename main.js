@@ -23,7 +23,7 @@ class FragranceTournament {
       return [];
     }
   }
-  
+
   writeResults() {
     fs.writeFileSync("results.json", JSON.stringify(this.results));
   }
@@ -38,7 +38,7 @@ class FragranceTournament {
     }
     return pairs;
   }
-  
+
   showStandings() {
     const standings = {};
     this.results.forEach((result) => {
@@ -52,27 +52,21 @@ class FragranceTournament {
       }
       standings[category][winner]++;
     });
+
     Object.keys(standings).forEach((category) => {
       console.log(`\nCategory: ${category}`);
       const categoryStandings = standings[category];
       const sortedStandings = Object.keys(categoryStandings).sort(
         (a, b) => categoryStandings[b] - categoryStandings[a]
       );
-      let rank = 1;
-      sortedStandings.forEach((winner) => {
-        let color = "";
-        if (rank === 1) {
-          color = "\x1b[33m"; // yellow
-        } else if (rank === 2) {
-          color = "\x1b[34m"; // blue
-        } else if (rank === 3) {
-          color = "\x1b[32m"; // green
-        }
-        console.log(
-          `  ${color}${rank}. ${winner}: ${categoryStandings[winner]}\x1b[0m`
-        );
-        rank++;
-      });
+
+      const formattedStandings = sortedStandings.map((winner, index) => ({
+        Rank: index + 1,
+        Fragrance: winner,
+        Wins: categoryStandings[winner],
+      }));
+
+      console.table(formattedStandings, ["Rank", "Fragrance", "Wins"]);
     });
   }
 
@@ -106,27 +100,27 @@ class FragranceTournament {
 
   showHistory() {
     const resultsByCategory = {};
-    
+
     this.results.forEach((result) => {
       const category = result.category;
       if (!resultsByCategory[category]) {
-        resultsByCategory[category] = []; 
+        resultsByCategory[category] = [];
       }
       resultsByCategory[category].push(result);
     });
-  
+
     Object.keys(resultsByCategory).forEach((category) => {
       console.log(`\nCategory: ${category}\n`);
-      
+
       // Sort winners alphabetically
       resultsByCategory[category].sort((a, b) => {
         if (a.winner < b.winner) return -1;
         if (a.winner > b.winner) return 1;
         return 0;
       });
-  
+
       resultsByCategory[category].forEach((result) => {
-        console.log(  
+        console.log(
           `\x1b[32m${result.winner}\x1b[0m vs ${result.entrants.find(
             (entrant) => entrant !== result.winner
           )}`
@@ -155,7 +149,7 @@ class FragranceTournament {
     });
     return battles;
   }
-  
+
 
   prompt(rl, loop) {
     const battles = this.showBattles();
